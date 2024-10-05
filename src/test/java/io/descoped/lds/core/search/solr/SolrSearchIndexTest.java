@@ -1,10 +1,10 @@
-package no.ssb.lds.core.search.solr;
+package io.descoped.lds.core.search.solr;
 
 import com.fasterxml.jackson.databind.JsonNode;
-import no.ssb.lds.api.persistence.DocumentKey;
-import no.ssb.lds.api.persistence.json.JsonDocument;
-import no.ssb.lds.api.persistence.json.JsonTools;
-import no.ssb.lds.api.search.SearchResponse;
+import io.descoped.lds.api.persistence.DocumentKey;
+import io.descoped.lds.api.persistence.json.JsonDocument;
+import io.descoped.lds.api.persistence.json.JsonTools;
+import io.descoped.lds.api.search.SearchResponse;
 import org.apache.commons.io.FileUtils;
 import org.apache.solr.client.solrj.embedded.EmbeddedSolrServer;
 import org.apache.solr.core.CoreContainer;
@@ -25,7 +25,7 @@ import java.nio.file.Paths;
 import java.time.ZonedDateTime;
 import java.util.Set;
 
-import static org.testng.Assert.*;
+import static org.testng.Assert.assertEquals;
 
 public class SolrSearchIndexTest {
 
@@ -35,7 +35,7 @@ public class SolrSearchIndexTest {
     @BeforeClass
     public void setUp() {
         CoreContainer container = new CoreContainer("src/test/resources/solr");
-        server = new EmbeddedSolrServer(container, "lds-index" );
+        server = new EmbeddedSolrServer(container, "lds-index");
         searchIndex = new SolrSearchIndex(server, server);
         container.load();
     }

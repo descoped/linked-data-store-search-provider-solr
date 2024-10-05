@@ -1,7 +1,7 @@
-package no.ssb.lds.core.search.solr;
+package io.descoped.lds.core.search.solr;
 
-import no.ssb.lds.api.search.SearchIndex;
-import no.ssb.lds.api.search.SearchIndexProvider;
+import io.descoped.lds.api.search.SearchIndex;
+import io.descoped.lds.api.search.SearchIndexProvider;
 
 import java.util.Map;
 import java.util.Set;

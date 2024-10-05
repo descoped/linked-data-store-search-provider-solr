@@ -1,16 +1,16 @@
-package no.ssb.lds.core.search.solr;
+package io.descoped.lds.core.search.solr;
 
+import io.descoped.lds.api.persistence.DocumentKey;
+import io.descoped.lds.api.persistence.flattened.FlattenedDocument;
+import io.descoped.lds.api.persistence.flattened.FlattenedDocumentLeafNode;
+import io.descoped.lds.api.persistence.json.JsonDocument;
+import io.descoped.lds.api.persistence.json.JsonToFlattenedDocument;
+import io.descoped.lds.api.persistence.streaming.FragmentType;
+import io.descoped.lds.api.search.SearchIndex;
+import io.descoped.lds.api.search.SearchResponse;
+import io.descoped.lds.api.search.SearchResult;
 import io.reactivex.Completable;
 import io.reactivex.Single;
-import no.ssb.lds.api.persistence.DocumentKey;
-import no.ssb.lds.api.persistence.flattened.FlattenedDocument;
-import no.ssb.lds.api.persistence.flattened.FlattenedDocumentLeafNode;
-import no.ssb.lds.api.persistence.json.JsonDocument;
-import no.ssb.lds.api.persistence.json.JsonToFlattenedDocument;
-import no.ssb.lds.api.persistence.streaming.FragmentType;
-import no.ssb.lds.api.search.SearchIndex;
-import no.ssb.lds.api.search.SearchResponse;
-import no.ssb.lds.api.search.SearchResult;
 import org.apache.solr.client.solrj.SolrClient;
 import org.apache.solr.client.solrj.SolrQuery;
 import org.apache.solr.client.solrj.impl.ConcurrentUpdateSolrClient;
